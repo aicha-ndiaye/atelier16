@@ -49,8 +49,15 @@ public function insert_contact($nom, $prenom,$numero, $favori){
         ]);
 
        }
-
-}
+       function verification_numero($numero){
+        $sql="SELECT * FROM contacts WHERE numero=:numero";
+        $stmt = $this->getConn()->prepare($sql);
+        $stmt->bindParam(':numero', $numero);
+        if($stmt->execute()){
+            return $stmt->fetchAll();
+        }
+       }
+       }
 
     
 

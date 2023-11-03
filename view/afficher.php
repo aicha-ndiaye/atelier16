@@ -1,7 +1,7 @@
 <?php   
 require("../modele/contact.php");
 $obj1=new contact();
-$abib=$obj1->lister_contact();
+$liste=$obj1->lister_contact();
 
 
 
@@ -34,16 +34,16 @@ th, td {
     <th>favori</th>
     <th>Actions</th> 
   </tr>
-  <?php foreach ($abib as $diouf):?>
+  <?php foreach ($liste as $contact):?>
   <tr>
-    <td><?=$diouf['nom']; ?></td>
-    <td><?=$diouf['prenom']; ?></td>
-    <td><?=$diouf['numero']; ?></td>
-    <td><?=$diouf['favori']; ?></td>
+    <td><?=$contact['nom']; ?></td>
+    <td><?=$contact['prenom']; ?></td>
+    <td><?=$contact['numero']; ?></td>
+    <td><?=$contact['favori']; ?></td>
     <td>
      <form action="../controller/modisupp.php" method ="post">
-     <button name="modifier" value="<?=$diouf['id_nom']; ?>">Modifier</button>
-      <button name="supprimer" value="<?=$diouf['id_nom']; ?>">Supprimer</button>
+     <button name="modifier" value="<?=$contact['id_nom']; ?>">Modifier</button>
+      <button name="supprimer" value="<?=$contact['id_nom']; ?>">Supprimer</button>
      </form>
     </td>
   </tr>
