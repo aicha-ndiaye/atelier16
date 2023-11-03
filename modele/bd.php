@@ -1,7 +1,7 @@
 <?php 
 class database{
     protected $servername;
-    protected $username
+    protected $username;
     protected $password;
     protected $dbname;
     protected $conn;

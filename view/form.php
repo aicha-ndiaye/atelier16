@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class ="form">
-    <form action="contact.php" method="post">
+    <form action="../controller/modisupp.php" method="post">
         <h1>ajouter vos contacts ici!!!</h1>
 <label for="nom">nom</label>
 <input type="text"name="nom"placeholder ="veuillez saisir votre nom ici" require><br>

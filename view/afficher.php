@@ -1,5 +1,5 @@
 <?php   
-require("contact.php");
+require("../modele/contact.php");
 $obj1=new contact();
 $abib=$obj1->lister_contact();
 
@@ -41,7 +41,7 @@ th, td {
     <td><?=$diouf['numero']; ?></td>
     <td><?=$diouf['favori']; ?></td>
     <td>
-     <form action="modisupp.php" method ="post">
+     <form action="../controller/modisupp.php" method ="post">
      <button name="modifier" value="<?=$diouf['id_nom']; ?>">Modifier</button>
       <button name="supprimer" value="<?=$diouf['id_nom']; ?>">Supprimer</button>
      </form>
